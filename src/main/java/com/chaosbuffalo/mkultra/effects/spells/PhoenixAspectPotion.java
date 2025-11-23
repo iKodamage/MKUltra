@@ -55,7 +55,7 @@ public class PhoenixAspectPotion extends PassiveEffect {
             // Store original speed
             cast.setFloat("flySpeed", player.capabilities.getFlySpeed());
 
-            player.capabilities.allowFlying = true;
+            player.capabilities.allowFlying = false;
             SPacketPlayerAbilities packet = new SPacketPlayerAbilities(player.capabilities);
             packet.setFlySpeed(.1f);
             player.connection.sendPacket(packet);
